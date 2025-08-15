@@ -1,0 +1,34 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin'as *;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+input,
+textarea,
+select,
+p,
+h1,
+h2, 
+li, 
+span,
+button {
+    margin: 0;
+    font-family: var(--font-poppins);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    @include mobile-450 {
+        width: 100%
+    }
+}
+

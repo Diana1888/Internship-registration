@@ -1,0 +1,70 @@
+@use '@/app/styles/media-queries.scss'as *;
+@use '@/app/styles/mixin'as *;
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+
+.stepLine {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.step {
+  color: var(--primary-color);
+  font-size: var(--font-size-xl);
+  background-color: var(--light-color);
+  padding: 1rem 1.5rem;
+  border-radius: 100%;
+
+  @include tablet-820 {
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-lg);
+  }
+
+    @include mobile-590 {
+    padding: 0.25rem 0.5rem;
+    font-size: var(--font-size-md);
+  }
+}
+
+.active-step {
+  color: var(--light-color);
+  background-color: var(--primary-color);
+}
+
+.progressLineWrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.progressLine {
+  width: 100%;
+  height: 5px;
+  background-color: var(--light-color);
+  overflow: hidden;
+  border-radius: 2px;
+  margin: 0 0.75rem;
+
+  @include tablet-820 {
+    margin: 0 0.25rem;
+  }
+
+  @include mobile-590 {
+    margin: 0;
+  }
+}
+
+.activeProgressLine {
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+.lastStepLine {
+  flex: 0;
+}
