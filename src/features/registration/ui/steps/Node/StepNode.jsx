@@ -1,9 +1,8 @@
 import { useFormContext } from 'react-hook-form';
 import styles from './StepNode.module.scss';
 import { message } from '@/shared/lib/validation';
-import { ArrowForwardIcon } from '@/shared/assets/svg/ArrowForwardIcon';
-import { ArrowBackIcon } from '@/shared/assets/svg/ArrowBackIcon';
 import  line  from '@/shared/assets/line.png'
+import { Button } from '../../../../../shared/ui/Button/Button';
 
 export const StepNode = ({onSubmit, onBack}) => {
   const { register, 
@@ -48,7 +47,13 @@ export const StepNode = ({onSubmit, onBack}) => {
       </div>
       {errors.knowsNode && <p className={styles.error}>{errors.knowsNode.message}</p>}
       <div className={styles.buttonContainer}>
-                <button 
+                                        <Button onClick={onBack} action='back'>
+                                            Back
+                                        </Button>
+                                                        <Button type='submit' action='next'>
+                                                            Next
+                                                        </Button>
+                {/* <button 
                     type='button'
                     className={styles.button}
                     onClick={onBack}
@@ -63,7 +68,7 @@ export const StepNode = ({onSubmit, onBack}) => {
                 >
                     Next
                     <ArrowForwardIcon className={styles.arrow}/>
-                </button> 
+                </button>  */}
             </div> 
     </form>
   );

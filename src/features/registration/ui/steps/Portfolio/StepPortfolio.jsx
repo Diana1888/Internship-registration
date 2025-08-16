@@ -1,9 +1,8 @@
 import { useFormContext } from 'react-hook-form';
 import { message, portfolioRegex} from "@/shared/lib/validation";
 import styles from './StepPortfolio.module.scss'
-import { ArrowForwardIcon } from '@/shared/assets/svg/ArrowForwardIcon';
-import { ArrowBackIcon } from '@/shared/assets/svg/ArrowBackIcon';
 import  line  from '@/shared/assets/line.png'
+import { Button } from '../../../../../shared/ui/Button/Button';
 
 export const StepPortfolio = ({onSubmit,onBack})=>{
     const {
@@ -40,7 +39,13 @@ export const StepPortfolio = ({onSubmit,onBack})=>{
             
 
             <div className={styles.buttonContainer}>
-                <button 
+                                <Button onClick={onBack} action='back'>
+                                    Back
+                                </Button>
+                                                <Button type='submit' action='next'>
+                                                    Next
+                                                </Button>
+                {/* <button 
                     type='button'
                     className={styles.button}
                     onClick={onBack}
@@ -55,7 +60,7 @@ export const StepPortfolio = ({onSubmit,onBack})=>{
                 >
                     Next
                     <ArrowForwardIcon className={styles.arrow}/>
-                </button> 
+                </button>  */}
             </div>
 
         </form>

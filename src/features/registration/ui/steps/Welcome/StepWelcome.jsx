@@ -2,6 +2,7 @@ import styles from './StepWelcome.module.scss'
 import { Paperclip } from 'lucide-react';
 import line from '@/shared/assets/line.png';
 import { ArrowForwardIcon } from '@/shared/assets/svg/ArrowForwardIcon';
+import { Button } from '../../../../../shared/ui/Button/Button';
 
 
 
@@ -29,21 +30,27 @@ export const StepWelcome = ({onNext}) => {
             </p>
             <div className={styles.buttonContainer}>
                 
-                <a href="/public/guide.pdf" download className={styles.download}>
+                <Button tag='Link' to='/public/guide.pdf' download>
+                    Download The Guide
+                </Button>
+                {/* <a href="/public/guide.pdf" download className={styles.download}>
                     <button className={styles.button}>
                         Download The Guide
                     </button>
-                </a>
+                </a> */}
                 
+                <Button onClick={onNext} action='next'>
+                    Next
+                </Button>
             
             
-            <button
+            {/* <button
                 className={styles.button}
                 onClick={onNext}
             >
                 Next
                 <ArrowForwardIcon className={styles.arrow}/>
-            </button> 
+            </button>  */}
             
             </div>          
         </div>

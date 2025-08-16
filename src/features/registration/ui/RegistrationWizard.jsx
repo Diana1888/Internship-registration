@@ -86,7 +86,7 @@ export const RegistrationWizard = () => {
             onBack={()=> send({ type: 'BACK' })}
             
             onSubmit={(data) => {
-              console.log('Заявка отправлена:', data);
+              console.log('Application submitted:', data);
               send({ type: 'SUBMIT', data });
             }} 
             
