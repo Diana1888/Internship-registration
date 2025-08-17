@@ -47,28 +47,12 @@ export const StepNode = ({onSubmit, onBack}) => {
       </div>
       {errors.knowsNode && <p className={styles.error}>{errors.knowsNode.message}</p>}
       <div className={styles.buttonContainer}>
-                                        <Button onClick={onBack} action='back'>
-                                            Back
-                                        </Button>
-                                                        <Button type='submit' action='next'>
-                                                            Next
-                                                        </Button>
-                {/* <button 
-                    type='button'
-                    className={styles.button}
-                    onClick={onBack}
-                >
-                    <ArrowBackIcon className={styles.arrow}/>
-                    Back
-                </button>
-                
-                <button 
-                    type="submit" 
-                    className={styles.button}
-                >
-                    Next
-                    <ArrowForwardIcon className={styles.arrow}/>
-                </button>  */}
+        <Button onClick={onBack} action='back'>
+          Back
+          </Button>
+          <Button type='submit' action='next'>
+             Next
+            </Button>
             </div> 
     </form>
   );

@@ -2,10 +2,8 @@ import { useFormContext } from 'react-hook-form';
 import styles from './StepSubmit.module.scss';
 import { message} from "@/shared/lib/validation";
 import line from '@/shared/assets/line.png';
-import { ArrowBackIcon } from '@/shared/assets/svg/ArrowBackIcon';
-import { ArrowForwardIcon } from '@/shared/assets/svg/ArrowForwardIcon';
 import { emailRegex, textRegex } from '@/shared/lib/validation';
-import { Button } from '../../../../../shared/ui/Button/Button';
+import { Button } from '@/shared/ui/Button/Button';
 
 export const StepSubmit = ({ onSubmit, onBack }) => {
   const {
@@ -73,28 +71,12 @@ export const StepSubmit = ({ onSubmit, onBack }) => {
       </div> 
 
       <div className={styles.buttonContainer}>
-                                                <Button onClick={onBack} action='back'>
-                                            Back
-                                        </Button>
-                                                        <Button type='submit' action='next'>
-                                                            Submit
-                                                        </Button>
-        {/* <button 
-          type='button'
-          className={styles.button}
-          onClick={onBack}
-        >
-          <ArrowBackIcon className={styles.arrow}/>
-          Back
-        </button>
-                
-        <button 
-          type="submit" 
-          className={styles.button}
-        >
-          Submit
-          <ArrowForwardIcon className={styles.arrow}/>
-        </button>  */}
+        <Button onClick={onBack} action='back'>
+           Back
+           </Button>
+           <Button type='submit' action='next'>
+               Submit
+                </Button>
       </div>
     </form>
   );

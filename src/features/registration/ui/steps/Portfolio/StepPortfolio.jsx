@@ -39,28 +39,12 @@ export const StepPortfolio = ({onSubmit,onBack})=>{
             
 
             <div className={styles.buttonContainer}>
-                                <Button onClick={onBack} action='back'>
-                                    Back
-                                </Button>
-                                                <Button type='submit' action='next'>
-                                                    Next
-                                                </Button>
-                {/* <button 
-                    type='button'
-                    className={styles.button}
-                    onClick={onBack}
-                >
-                    <ArrowBackIcon className={styles.arrow}/>
+                <Button onClick={onBack} action='back'>
                     Back
-                </button>
-                
-                <button 
-                    type="submit" 
-                    className={styles.button}
-                >
-                    Next
-                    <ArrowForwardIcon className={styles.arrow}/>
-                </button>  */}
+                    </Button>
+                    <Button type='submit' action='next'>
+                         Next
+                        </Button>
             </div>
 
         </form>

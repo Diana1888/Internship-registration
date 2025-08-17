@@ -2,8 +2,6 @@ import { useFormContext } from 'react-hook-form';
 import { message, projectRegex} from "@/shared/lib/validation";
 import styles from './StepProject.module.scss';
 import line from '@/shared/assets/line.png'
-// import { ArrowForwardIcon } from '@/shared/assets/svg/ArrowForwardIcon';
-// import { ArrowBackIcon } from '@/shared/assets/svg/ArrowBackIcon';
 import { Button } from '../../../../../shared/ui/Button/Button';
 
 export const StepProject = ({onSubmit, onBack})=>{
@@ -40,28 +38,12 @@ export const StepProject = ({onSubmit, onBack})=>{
             </div>
             
                  <div className={styles.buttonContainer}>
-                                <Button onClick={onBack} action='back'>
-                                    Back
-                                </Button>
-                                                <Button type='submit' action='next'>
-                                                    Next
-                                                </Button>
-                {/* <button 
-                    type='button'
-                    className={styles.button}
-                    onClick={onBack}
-                >
-                    <ArrowBackIcon className={styles.arrow}/>
-                    Back
-                </button>
-                
-                <button 
-                    type="submit" 
-                    className={styles.button}
-                >
-                    Next
-                    <ArrowForwardIcon className={styles.arrow}/>
-                </button>  */}
+                    <Button onClick={onBack} action='back'>
+                        Back
+                        </Button>
+                        <Button type='submit' action='next'>
+                        Next
+                            </Button>
             </div>
         </form>
     )}
