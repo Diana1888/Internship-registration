@@ -7,7 +7,7 @@ import { Button } from '../../../../../shared/ui/Button/Button';
 export const StepNode = ({onSubmit, onBack}) => {
   const { register, 
     handleSubmit,
-    formState: { errors } 
+    formState: { errors, isValid } 
   } = useFormContext();
 
   const sendNode = (data) => {
@@ -50,7 +50,7 @@ export const StepNode = ({onSubmit, onBack}) => {
         <Button onClick={onBack} action='back'>
           Back
           </Button>
-          <Button type='submit' action='next'>
+          <Button type='submit' action='next' disabled={!isValid}>
              Next
             </Button>
             </div> 

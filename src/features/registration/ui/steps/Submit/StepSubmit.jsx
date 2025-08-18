@@ -9,7 +9,7 @@ export const StepSubmit = ({ onSubmit, onBack }) => {
   const {
     register,
     handleSubmit, 
-    formState: { errors },
+    formState: { errors, isValid },
     watch,
   } = useFormContext();
 
@@ -74,7 +74,7 @@ export const StepSubmit = ({ onSubmit, onBack }) => {
         <Button onClick={onBack} action='back'>
            Back
            </Button>
-           <Button type='submit' action='next'>
+           <Button type='submit' action='next' disabled={!isValid}>
                Submit
                 </Button>
       </div>

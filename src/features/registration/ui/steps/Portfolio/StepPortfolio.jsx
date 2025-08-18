@@ -8,7 +8,7 @@ export const StepPortfolio = ({onSubmit,onBack})=>{
     const {
         register,
         handleSubmit, 
-        formState: { errors }
+        formState: { errors, isValid }
     } = useFormContext();
     
     const sendPortfolio = (data) => {
@@ -42,7 +42,7 @@ export const StepPortfolio = ({onSubmit,onBack})=>{
                 <Button onClick={onBack} action='back'>
                     Back
                     </Button>
-                    <Button type='submit' action='next'>
+                    <Button type='submit' action='next' disabled={!isValid}>
                          Next
                         </Button>
             </div>
