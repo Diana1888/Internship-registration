@@ -13,22 +13,22 @@ export const StepWelcome = ({onNext}) => {
             <p><span className={styles.boldText}>The internship will take place from September 15 to December 15, 2025,</span> but before that, there are some important stages:</p>
             <ol className={styles.list}>
                 <li><span>Application deadline — August 31, 11:59pm</span></li>
-                <li>С <span className={styles.boldText}>From September 1 to 15</span> team leads will review the submitted work</li>
+                <li><span className={styles.boldText}>From September 1 to 15</span> team leads will review the submitted work</li>
                 <li>The best participants will be invited <span className={styles.boldText}>to the second stage</span>  — an intensive <span className={styles.boldText}>3-month training program</span></li>
-                <li>At the end — <span className={styles.boldText}>an exam,</span>, and if you pass successfully, <span>an internship on a real commercial project</span></li>
+                <li>At the end — <span className={styles.boldText}>an exam,</span> and if you pass successfully, <span>an internship on a real commercial project</span></li>
             </ol>
             <p>Before starting your registration, <span className={styles.boldText}>prepare:</span></p>
             <ul className={styles.list}>
                 <li>A portfolio and GitHub profile</li>
                 <li>Projects formatted according to standards</li>
             </ul>
-            <p><Paperclip className={styles.paperClip}/>We’ve prepared <a href="/public/guide.pdf" download>a guide on how to get your projects ready </a> — download it and make sure everything is in order.</p>
+            <p><Paperclip className={styles.paperClip}/>We’ve prepared <a href="/Internship-registration/guide.pdf" download>a guide on how to get your projects ready </a> — download it and make sure everything is in order.</p>
             <p className={styles.tip}>
                 <img src={line} className={styles.line} width={24} alt="line"/>
                 Only after that, proceed to the next step.
             </p>
             <div className={styles.buttonContainer}>           
-                <Button tag='Link' to='/public/guide.pdf' download>
+                <Button tag='Link' href="/Internship-registration/guide.pdf" download>
                     Download The Guide
                 </Button>
                 
